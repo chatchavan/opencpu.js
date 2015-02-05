@@ -390,14 +390,14 @@ if(!window.jQuery) {
       }
 
       if(r_cors){
-        console.log("Setting path to CORS server " + r_path.href);
+        // console.log("Setting path to CORS server " + r_path.href);
       } else {
-        console.log("Setting path to local (non-CORS) server " + r_path.href);
+        // console.log("Setting path to local (non-CORS) server " + r_path.href);
       }
 
       //we use trycatch because javascript will throw an error in case CORS is refused.
       $.get(r_path.href, function(resdata){
-        console.log("Path updated. Available objects/functions:\n" + resdata);
+        // console.log("Path updated. Available objects/functions:\n" + resdata);
         success(newpath);
 
       }).fail(function(xhr, textStatus, errorThrown){
